@@ -16,7 +16,7 @@ Describe your signals in plain English:
 
 Get a timing diagram:
 
-![WaveCraft main interface](images/wavecraft-main.png)
+![WaveCraft main interface](images/wavecraft-ui.png)
 
 ---
 
@@ -42,23 +42,19 @@ Get a timing diagram:
 
 ---
 
-## Example Prompts
+## Multi-Clock Domains
 
-| Signal Names | Prompt |
-|---|---|
-| `clk rst_n enable data` | *reset low for 3 cycles then releases, enable asserts one cycle later* |
-| `clk valid ready data` | *valid-ready handshake with one stall cycle* |
-| `sclk cs_n mosi miso` | *SPI mode 0 transfer 8 bits* |
-| `clk req ack` | *draw an arrow from req rising edge to ack rising edge labeled latency* |
-| `clk1 clk2 data` | *clk1 is 100MHz, clk2 is 150MHz, data updates on clk2 rising edge* |
+WaveCraft automatically handles frequency ratios between clocks — specify MHz values and it calculates the correct period relationships:
+
+![Multi-clock diagram](images/wavecraft-clocks.png)
 
 ---
 
 ## Timing Annotations with Arrows
 
-WaveCraft supports WaveDrom edge arrows to annotate latency, setup time, and timing relationships:
+WaveCraft supports WaveDrom edge arrows to annotate latency, setup time, and timing relationships between signals:
 
-![Arrow annotations](images/wavecraft-arrows.png)
+![Arrow annotations](images/wavecraft-timing.png)
 
 ---
 
@@ -88,7 +84,7 @@ Browse categorized examples for clock basics, handshakes, protocols, FPGA patter
 
 Works in Safari and Chrome on iOS and Android:
 
-![Mobile view](images/wavecraft-mobile.png)
+![Mobile view](images/wavecraft-phone.png)
 
 ---
 
